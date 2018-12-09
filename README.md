@@ -8,7 +8,12 @@ There are many other great resources and classes like:
 * [JavaScripForWP.com](https://javascriptforwp.com/)
 * [Gutenberg.courses](https://gutenberg.courses/)
 
-# The Basics
+# The Basics - Terms & Syntax
+One thing I'd like to point out for those who are used to writing basic PHP in theme files, is that PHP and HTML go hand in hand. You write PHP an the server interprets & renders this as HTML for the browser.
+
+JavaScript typically runs in a separate block (script tag) or file, and manipulates the HTML the browser sees after it has been loaded. (client side)
+
+For any examples below, you won't be able to just replace the PHP code with JavaScript, you'll have to tell it where to place things, and how to work with them, but we can go over that too :)
 
 ## Functions
 The syntax for functions is identical. You might be familiar with such great WordPress functions like:
@@ -21,3 +26,4 @@ Functions run other code, so you are not repeating or copy & pasting code nearly
 | PHP   |      JavaScript      |
 |----------|:-------------:|
 | ```some_function()``` |  ```some_function()``` |
+
