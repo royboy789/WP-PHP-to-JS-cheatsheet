@@ -66,3 +66,25 @@ If you want to learn more about OOP (Classes), read & follow [Carl Alexander](ht
 | PHP   |      JavaScript      |
 |----------|:-------------:|
 | Array: ```$array['key']``` <br/> Object: ```$object->key```  |  ```object.key``` |
+
+
+## WordPress Hooks
+[WordPress Hooks](https://codex.wordpress.org/Plugin_API/Hooks) is one of the best parts about WordPress helping making it a very extensible platform. You may be used to `add_action` or `add_filter`, and now we can do that with JavaScript.
+
+You must be in the admin or have the `@wordpress/hooks` package. For a more detailed look at this package check out [Igor's post](https://www.ibenic.com/use-wordpress-hooks-package-javascript-apps/) on the WordPress hooks package.
+
+For this example I'm going to assume you are in the admin and have acess to `wp.hooks` - if you are not sure, open your developer console and see if `wp.hooks` is defined by typing `wp.hooks` and hitting enter.
+
+#### Action Hook
+
+ | PHP   |      JavaScript      |
+ |----------|:-------------:|
+ | ```add_action( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addAction( 'some_wp_action', 'namespace', callbackFunc, 10``` |
+ 
+ 
+ #### Filter
+ | PHP   |      JavaScript      |
+  |----------|:-------------:|
+  | ```add_filter( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addFilter( 'some_filter', 'namespace', callbackFunc, 10``` |
+  
+To see a full list of extendability of `wp.hooks` view the [package readme](https://github.com/WordPress/gutenberg/tree/master/packages/hooks)
