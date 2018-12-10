@@ -79,12 +79,12 @@ For this example I'm going to assume you are in the admin and have acess to `wp.
 
  | PHP   |      JavaScript      |
  |----------|:-------------:|
- | ```add_action( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addAction( 'some_wp_action', 'namespace', callbackFunc, 10``` |
+ | ```add_action( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addAction( 'some_wp_action', 'namespace', callbackFunc, 10 )``` |
  
  
  #### Filter
  | PHP   |      JavaScript      |
   |----------|:-------------:|
-  | ```add_filter( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addFilter( 'some_filter', 'namespace', callbackFunc, 10``` |
+  | ```add_filter( 'some_wp_action', 'my_callback_function', 10, 2 )``` |  ```wp.hooks.addFilter( 'some_filter', 'namespace', callbackFunc, 10 )``` |
   
 To see a full list of extendability of `wp.hooks` view the [package readme](https://github.com/WordPress/gutenberg/tree/master/packages/hooks)
